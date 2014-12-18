@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "kandan-centos-box"
   config.vm.box_url = "https://s3.amazonaws.com/vagrant-dev-images/kandan/virtualbox_CentOS-6.5-x86_64-minimal.box"
+  config.vm.box_download_insecure = true
   config.vm.hostname = 'kandan.dev'
   config.vm.network "private_network", ip: "10.15.15.10"
 
